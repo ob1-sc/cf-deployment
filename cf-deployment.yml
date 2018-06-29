@@ -898,6 +898,8 @@ instance_groups:
     release: routing
     properties:
       router:
+        forwarded_client_cert: sanitize_set
+        ca_certs: "((router_ca_certs))"
         enable_ssl: true
         tls_pem:
         - cert_chain: "((router_ssl.certificate))"
